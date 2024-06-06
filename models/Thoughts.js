@@ -23,4 +23,4 @@ const thoughtsSchema = new Schema(
     },
 )
 
-modeule.exports = thoughtsSchema;
+    modeule.exports = Thoughts;
