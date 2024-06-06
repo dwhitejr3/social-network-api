@@ -2,7 +2,7 @@ const { Schema, SchemaType } = require('mongoose');
 const Thoughts = require('./Thoughts');
 
 
-const userSchema = new Schema(
+const User = new Schema(
     {
         first: String,
         last: String,

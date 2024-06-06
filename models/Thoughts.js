@@ -1,7 +1,7 @@
 const { Schema, model, SchemaType } = require('mongoose');
 const User = require('./User');
 
-const thoughtsSchema = new Schema(
+const Thoughts = new Schema(
     {
         createdAt: {
             type: Date,
@@ -23,4 +23,4 @@ const thoughtsSchema = new Schema(
     },
 )
 
-    modeule.exports = Thoughts;
+    module.exports = Thoughts;
