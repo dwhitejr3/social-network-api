@@ -1,11 +1,23 @@
-const { Schema, SchemaType } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const Thoughts = require('./Thoughts');
 
 
-const User = new Schema(
+const userSchema = new Schema(
     {
-        first: String,
-        last: String,
+
+        userName: {
+            type: String,
+            required: true,
+            unique: true
+        },
+
+        email: {
+            type: String,
+            required: true,
+            unique: true
+
+        },
+
         thoughts: [
             {
                 type: Schema.Types.ObjectId,
@@ -15,7 +27,7 @@ const User = new Schema(
         friends: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'User', 
+                ref: 'User',
             }
         ]
     },
@@ -28,6 +40,7 @@ const User = new Schema(
 
 );
 
+const User = model('user', userSchema)
 
 
 
